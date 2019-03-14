@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+#Grid {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+#Header {
+  grid-row: 1/2;
+  background-color: #525252;
+  color: white;
+  font-size: 31px;
+  letter-spacing: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  z-index: 0;
+  position: absolute;
+  height: 30em;
+  width: 100%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 100%;
+}
+
+#Intro {
+  grid-column: 2/3;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+#Intro #Intro-1 {
+  letter-spacing: 6px;
+  font-size: 1.3125em;
+  width: 50%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#Intro #Intro-2 {
+  letter-spacing: 6px;
+  font-size: 1.3125em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#Intro #Intro-2 p {
+  margin-bottom: 0;
+}
+
+#Skills-wrapper {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#Skills-subgrid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 3em);
+  row-gap: 2em;
+  column-gap: 4em;
+  align-content: center;
+}
+
+.skill {
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #FFFFFF;
+  text-decoration-line: none;
+}
+.skill p {
+  align-self: center;
+  margin: 0;
+}
+
+.skill:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #000000;
+  color: white;
+  text-decoration-line: none;
+}
+
+#Overlay-Grid {
+  position: fixed;
+  z-index: 100000;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#Overlay-Grid #Title {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-size: 4em;
+  font-family: Helvetica;
+  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+  align-self: center;
+  justify-self: center;
+}
+#Overlay-Grid #Logo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+#Overlay-Grid #Text {
+  font-family: Helvetica;
+  font-size: 2em;
+  color: white;
+  align-self: center;
+  justify-self: center;
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+#Overlay-Return:hover {
+  cursor: default;
+}
+
+#Middle-right-grid {
+  position: relative;
+  grid-row: 1/3;
+  grid-column: 3/4;
+  height: 100%;
+  margin-right: 25%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#Middle-right-grid #arrows {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  align-self: center;
+  z-index: 10;
+}
+#Middle-right-grid #arrows-text {
+  writing-mode: sideways-lr;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
+  justify-self: right;
+  margin-top: 12px;
+  margin-right: 12px;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-size: 14px;
+}
+
+#Middle-left-grid {
+  position: relative;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  height: 100%;
+  margin-left: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#Middle-left-grid #arrows {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: right;
+  z-index: 10;
+}
+#Middle-left-grid #arrows-text {
+  writing-mode: sideways-rl;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
+  justify-self: left;
+  margin-top: 12px;
+  margin-right: 12px;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-size: 14px;
+}
+
+#Footer {
+  grid-row: 3/4;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#Footer #arrows {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: center;
+}
+#Footer #arrows:hover {
+  cursor: pointer;
+}
+#Footer #arrows-text {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  align-self: flex-end;
+  justify-self: center;
+  margin-bottom: 0.7em;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-size: 14px;
+}
+
+.contact-form-enter {
+  opacity: 0.01;
+  transform: translateY(50%);
+}
+
+.contact-form-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.contact-form-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.contact-form-exit-active {
+  opacity: 0.01;
+  transform: translateY(50%);
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.contact-form {
+  position: fixed;
+  bottom: 0;
+  height: 33%;
+  width: 100%;
+  margin: 0;
+  background-color: #525252;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 30px repeat(3, 1fr) 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.contact-form p {
+  display: flex;
+  justify-self: right;
+  color: white;
+  margin: 0;
+}
+.contact-form #message-header {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  justify-self: center;
+  margin: 0;
+}
+.contact-form input {
+  border-radius: 0.5em;
+  padding: 2px;
+}
+.contact-form input:hover {
+  box-shadow: white 0 0 3px 0;
+}
+.contact-form #submit-hide {
+  display: none;
+}
+.contact-form #submit {
+  grid-column: 3/4;
+  justify-self: right;
+  margin-right: 5%;
+  border: white 2px solid;
+  padding: 8px;
+}
+.contact-form #submit:hover {
+  box-shadow: #ffffff 0px 0px 5px 0px;
+}
+.contact-form #message-form {
+  grid-row: 3/5;
+  grid-column: 3/4;
+  width: 90%;
+  height: 5em;
+  border-radius: 1em;
+  padding: 10px;
+}
+.contact-form #message-form:hover {
+  box-shadow: white 0 0 3px 0px;
+}
+.contact-form #close {
+  border-bottom: white solid 5px;
+  width: 10%;
+  grid-column: 1/4;
+  justify-self: center;
+  margin: 10px;
+  border-radius: 4px;
+  margin: 0;
+  height: 20px;
+}
+.contact-form #close:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=input.css.map */
