@@ -29,7 +29,7 @@ export default class ContactForm extends Component {
 
 
         try {
-            const response = await axios.get("/api/contact");
+            const response = await axios.post("/api/contact", this.state.contact);
             console.log(response)
         }
         catch (error) {
