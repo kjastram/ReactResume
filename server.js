@@ -7,6 +7,7 @@ const contactRoute = require("./routes/contact");
 require("dotenv").config();
 
 const port = process.env.PORT || 8080;
+uri = process.env.MONGODB_URI
 const app = express();
 
 //new or alternate middleware for body parsing?
@@ -17,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/TestDB", {
+mongoose.connect(uri, {
     useNewUrlParser: true
 }, (err) => {
     if (err) console.error(err);

@@ -22,8 +22,8 @@ contactRoute.post('/api/contact', (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: "kylethebeast@gmail.com",
-                pass: "Asheville376956"
+                user: process.env.SENDER_EMAIL,
+                pass: process.env.SENDER_PASS
             }
         });
 
@@ -40,7 +40,6 @@ contactRoute.post('/api/contact', (req, res) => {
 
         let info = await transporter.sendMail(mailOptions)
 
-        res.status(200).send(info)
     }
 
     main().catch(console.error);

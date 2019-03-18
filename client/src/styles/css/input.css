@@ -200,7 +200,7 @@ body {
   z-index: 10;
 }
 #Middle-left-grid #arrows-text {
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   grid-column: 2/3;
   grid-row: 1/4;
   align-self: center;
