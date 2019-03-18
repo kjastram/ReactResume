@@ -23,7 +23,7 @@ contactRoute.post('/api/contact', (req, res) => {
             secure: false,
             auth: {
                 user: "kylethebeast@gmail.com",
-                pass: ""
+                pass: process.env.SENDER_PASS
             }
         });
 
