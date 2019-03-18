@@ -22,8 +22,8 @@ contactRoute.post('/api/contact', (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: process.env.SENDER_EMAIL,
-                pass: process.env.SENDER_PASS
+                user: "kylethebeast@gmail.com",
+                pass: ""
             }
         });
 
