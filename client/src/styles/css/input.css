@@ -141,8 +141,10 @@ body {
   grid-column: 1/2;
 }
 #Overlay-Grid #Text {
+  font-weight: 1;
   font-family: Helvetica;
-  font-size: 2em;
+  font-size: 1.6em;
+  line-height: 8vh;
   color: white;
   align-self: center;
   justify-self: center;

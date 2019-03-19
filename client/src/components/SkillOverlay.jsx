@@ -28,52 +28,43 @@ export default SkillOverlay
 
 const skillDescriptions = [{
     skill: "Node.js",
-    desciption: "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+    desciption: "I can effectively use essential tools like NPM, and am comfortable with asynchronous programming concepts essential to Node.js.",
+
 },
 {
     skill: "Java",
-    desciption: "Java was my first intro to OOP.",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png"
+    desciption: "Java was my foundation in learning OOP principles and writing clean structured code. I would love the opportunity to use my Java knowledge in Android development.",
 },
 {
     skill: "React",
-    desciption: "test",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png"
+    desciption: "My first experience with React was in implementing internationalization support for a data visualization company using React. I love creating clean resuable components, and am capable with popular libraries like React Router and Redux.",
 },
 {
     skill: "Python",
-    desciption: "test",
-    logo: "https://www.python.org/static/opengraph-icon-200x200.png"
+    desciption: "I am able to use python in various ML and statistical applications and visualizations using Matplotlib.",
 },
 {
     skill: "R",
-    desciption: "test",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2000px-R_logo.svg.png"
+    desciption: "I am proficient at using R in data manipulation and visualization. It is a great tool for manipulating large sets of data.",
 },
 {
     skill: "MongoDB",
-    desciption: "test",
-    logo: "https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg"
+    desciption: "I am adept at creating RESTful services that manipulate the MongoDB database, primarily with the Node Mongoose package.",
 },
 {
     skill: "Express",
-    desciption: "test",
-    logo: "https://expressjs.com/images/express-facebook-share.png"
+    desciption: "Express applications are ideal for creating RESTful endpoints. On top of that, Express makes creating custom middleware and serving static content to the client easy and straightforward.",
 },
 {
     skill: "C",
-    desciption: "test",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/1200px-The_C_Programming_Language_logo.svg.png"
+    desciption: "Learning C as my introduction to software engineering was important to an understanding of computer architecture and ultimately better full stack development skills. I also enjoy working with embedded systems and gathering data with IoT devices.",
 },
 {
     skill: "HTML&CSS",
-    desciption: "test",
-    logo: "http://www.bobbyberberyan.com/wp-content/uploads/2012/03/HTML5CSS3Logos.svg"
+    desciption: "Solid grasp of CSS and HTML is essential for any front end development.",
 },
 {
     skill: "Javascript",
-    desciption: "Javascript is the common language used in MERN stack technologies. ",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+    desciption: "Javascript is the common language used in MERN stack technologies. My knowledge of general OOP principles as well as the DOM translates well into solid JS code.",
 },
 ]
