@@ -95,18 +95,33 @@ body {
     align-content: center;
 }
 
+@keyframes darken {
+    from {
+        background: radial-gradient(gray, rgba(0, 0, 0, 0.767));
+    }
+
+    to {
+        background: radial-gradient(gray, black)
+    }
+}
+
 .skill {
     border-radius: 5em;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-content: center;
-    color: #FFFFFF;
+    color: black;
     text-decoration-line: none;
-
+    background-color: white;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
 
     p {
         align-self: center;
         margin: 0;
+        font-weight: 400;
     }
 
 }
@@ -115,7 +130,11 @@ body {
     cursor: pointer;
     box-shadow: 1px 1px 3px #000000;
     color: white;
+    background-color: black;
     text-decoration-line: none;
+    transition-property: color, background-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
 }
 
 #Overlay-Grid {
