@@ -24,6 +24,56 @@ body {
     justify-content: center;
 }
 
+#Github-logo {
+    grid-row: 1/2;
+    position: absolute;
+    right: 10px;
+    fill: white;
+    transition-property: transform, fill;
+    transition: 300ms ease-in;
+    transform: scale(1);
+}
+
+#Github-logo:hover {
+    transition-property: transform, fill;
+    transition: 100ms ease-in;
+    fill: black;
+    transform: scale(1.1);
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+#Grid {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+}
+
+#Header {
+    grid-row: 1/2;
+    background-color: #525252;
+    color: white;
+    font-size: 31px;
+    letter-spacing: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Github-logo {
+    grid-row: 1/2;
+    position: absolute;
+    right: 10px;
+}
+
+
 .route-wrapper {
     position: relative;
 }
@@ -50,7 +100,7 @@ body {
     margin-bottom: 1em;
 
     #Intro-1 {
-        letter-spacing: 6px;
+        letter-spacing: 5px;
         font-size: 1.3125em;
         width: 50%;
         display: flex;
@@ -62,7 +112,7 @@ body {
     }
 
     #Intro-2 {
-        letter-spacing: 6px;
+        letter-spacing: 4px;
         font-size: 1.3125em;
         display: flex;
         align-items: center;
@@ -93,16 +143,6 @@ body {
     row-gap: 2em;
     column-gap: 4em;
     align-content: center;
-}
-
-@keyframes darken {
-    from {
-        background: radial-gradient(gray, rgba(0, 0, 0, 0.767));
-    }
-
-    to {
-        background: radial-gradient(gray, black)
-    }
 }
 
 .skill {
@@ -189,6 +229,7 @@ body {
     cursor: default;
 }
 
+
 #Middle-right-grid {
     position: relative;
     grid-row: 1/3;
@@ -207,6 +248,10 @@ body {
     }
 
     #arrows-text {
+        transition-property: opacity, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+        opacity: 0.6;
         writing-mode: vertical-lr;
         grid-column: 2/3;
         grid-row: 1/4;
@@ -219,6 +264,15 @@ body {
         font-size: 14px;
     }
 }
+
+#Middle-right-grid:hover>#arrows-text {
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 
 #Middle-left-grid {
     position: relative;
@@ -239,6 +293,10 @@ body {
     }
 
     #arrows-text {
+        transition-property: opacity, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+        opacity: 0.6;
         writing-mode: vertical-lr;
         grid-column: 2/3;
         grid-row: 1/4;
@@ -250,6 +308,14 @@ body {
         word-spacing: 3px;
         font-size: 14px;
     }
+}
+
+#Middle-left-grid:hover>#arrows-text {
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 #Footer {
@@ -270,6 +336,10 @@ body {
     }
 
     #arrows-text {
+        transition-property: opacity, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+        opacity: 0.6;
         grid-column: 1/4;
         grid-row: 2/3;
         align-self: flex-end;
@@ -279,6 +349,14 @@ body {
         word-spacing: 3px;
         font-size: 14px;
     }
+}
+
+#Footer:hover>#arrows-text {
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .checkmark-logo {
