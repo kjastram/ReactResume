@@ -1,93 +1,3 @@
-body {
-  margin: 0;
-  font-family: Helvetica;
-}
-
-#Grid {
-  position: absolute;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
-}
-
-#Header {
-  grid-row: 1/2;
-  background-color: #525252;
-  color: white;
-  font-size: 31px;
-  letter-spacing: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#Github-logo {
-  grid-row: 1/2;
-  position: absolute;
-  right: 10px;
-  fill: white;
-  transition-property: transform, fill;
-  transition: 300ms ease-in;
-  transform: scale(1);
-}
-
-#Github-logo:hover {
-  transition-property: transform, fill;
-  transition: 100ms ease-in;
-  fill: black;
-  transform: scale(1.1);
-}
-
-body {
-  margin: 0;
-  font-family: Helvetica;
-}
-
-#Grid {
-  position: absolute;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 100px;
-}
-
-#Header {
-  grid-row: 1/2;
-  background-color: #525252;
-  color: white;
-  font-size: 31px;
-  letter-spacing: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#Github-logo {
-  grid-row: 1/2;
-  position: absolute;
-  right: 10px;
-}
-
-.route-wrapper {
-  position: relative;
-}
-
-.route-wrapper > div {
-  z-index: 0;
-  position: absolute;
-  height: 30em;
-  width: 100%;
-  justify-self: center;
-  display: grid;
-  grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: 100%;
-}
-
 #Intro {
   grid-column: 2/3;
   height: 100%;
@@ -215,87 +125,32 @@ body {
   cursor: default;
 }
 
-#Middle-right-grid {
-  position: relative;
-  grid-row: 1/3;
-  grid-column: 3/4;
-  height: 100%;
-  margin-right: 25%;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-#Middle-right-grid #arrows {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  align-self: center;
-  z-index: 10;
-}
-#Middle-right-grid #arrows-text {
-  transition-property: opacity, transform;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  opacity: 0.6;
-  writing-mode: vertical-lr;
-  grid-column: 2/3;
-  grid-row: 1/4;
-  align-self: center;
-  justify-self: right;
-  margin-top: 12px;
-  margin-right: 12px;
-  letter-spacing: 4px;
-  word-spacing: 3px;
-  font-size: 14px;
+#Header {
+  grid-row: 1/2;
+  background-color: #525252;
+  color: white;
+  font-size: 31px;
+  letter-spacing: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#Middle-right-grid:hover > #arrows-text {
-  transition-property: opacity, transform;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  opacity: 1;
-  transform: scale(1.05);
+#Github-logo {
+  grid-row: 1/2;
+  position: absolute;
+  right: 10px;
+  fill: white;
+  transition-property: transform, fill;
+  transition: 300ms ease-in;
+  transform: scale(1);
 }
 
-#Middle-left-grid {
-  position: relative;
-  grid-row: 1/3;
-  grid-column: 1/2;
-  height: 100%;
-  margin-left: 25%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-#Middle-left-grid #arrows {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  align-self: center;
-  justify-self: right;
-  z-index: 10;
-}
-#Middle-left-grid #arrows-text {
-  transition-property: opacity, transform;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  opacity: 0.6;
-  writing-mode: vertical-lr;
-  grid-column: 2/3;
-  grid-row: 1/4;
-  align-self: center;
-  justify-self: left;
-  margin-top: 12px;
-  margin-right: 12px;
-  letter-spacing: 4px;
-  word-spacing: 3px;
-  font-size: 14px;
-}
-
-#Middle-left-grid:hover > #arrows-text {
-  transition-property: opacity, transform;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  opacity: 1;
-  transform: scale(1.05);
+#Github-logo:hover {
+  transition-property: transform, fill;
+  transition: 100ms ease-in;
+  fill: black;
+  transform: scale(1.1);
 }
 
 #Footer {
@@ -470,6 +325,119 @@ body {
 }
 .contact-form #close:hover {
   cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  z-index: 0;
+  position: absolute;
+  height: 30em;
+  width: 100%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 100%;
+}
+
+#Grid {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+#Middle-right-grid {
+  position: relative;
+  grid-row: 1/3;
+  grid-column: 3/4;
+  height: 100%;
+  margin-right: 25%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#Middle-right-grid #arrows {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  align-self: center;
+  z-index: 10;
+}
+#Middle-right-grid #arrows-text {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  opacity: 0.6;
+  writing-mode: vertical-lr;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
+  justify-self: right;
+  margin-top: 12px;
+  margin-right: 12px;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-size: 14px;
+}
+
+#Middle-right-grid:hover > #arrows-text {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#Middle-left-grid {
+  position: relative;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  height: 100%;
+  margin-left: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#Middle-left-grid #arrows {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: right;
+  z-index: 10;
+}
+#Middle-left-grid #arrows-text {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  opacity: 0.6;
+  writing-mode: vertical-lr;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
+  justify-self: left;
+  margin-top: 12px;
+  margin-right: 12px;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-size: 14px;
+}
+
+#Middle-left-grid:hover > #arrows-text {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=input.css.map */

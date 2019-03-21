@@ -1,0 +1,27 @@
+#Header {
+    grid-row: 1/2;
+    background-color: #525252;
+    color: white;
+    font-size: 31px;
+    letter-spacing: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Github-logo {
+    grid-row: 1/2;
+    position: absolute;
+    right: 10px;
+    fill: white;
+    transition-property: transform, fill;
+    transition: 300ms ease-in;
+    transform: scale(1);
+}
+
+#Github-logo:hover {
+    transition-property: transform, fill;
+    transition: 100ms ease-in;
+    fill: black;
+    transform: scale(1.1);
+}

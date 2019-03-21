@@ -1,0 +1,193 @@
+#Footer {
+    grid-row: 3/4;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    #arrows {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        justify-self: center;
+    }
+
+    #arrows:hover {
+        cursor: pointer;
+    }
+
+    #arrows-text {
+        transition-property: opacity, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+        opacity: 0.6;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        align-self: flex-end;
+        justify-self: center;
+        margin-bottom: 0.7em;
+        letter-spacing: 4px;
+        word-spacing: 3px;
+        font-size: 14px;
+    }
+}
+
+#Footer:hover>#arrows-text {
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.checkmark-logo {
+    box-shadow: 1px 1px 3px #000000;
+    border-radius: 18px;
+    align-self: center;
+    position: fixed;
+    left: 45%;
+    bottom: 50%;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    z-index: 1000;
+
+    h4 {
+        margin-top: 10px;
+    }
+
+    svg {
+        align-self: center;
+    }
+}
+
+.checkmark-logo-enter {
+    opacity: 0.01;
+    transform: translateY(50%)
+}
+
+.checkmark-logo-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.checkmark-logo-exit {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.checkmark-logo-exit-active {
+    opacity: 0.01;
+    transform: translateY(50%);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.contact-form-enter {
+    opacity: 0.01;
+    transform: translateY(50%);
+}
+
+.contact-form-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.contact-form-exit {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.contact-form-exit-active {
+    opacity: 0.01;
+    transform: translateY(50%);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+
+.contact-form {
+    position: fixed;
+    bottom: 0;
+    height: 33%;
+    width: 100%;
+    margin: 0;
+    background-color: #525252;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 30px repeat(3, 1fr) 1fr;
+    align-items: center;
+    justify-items: center;
+
+    p {
+        display: flex;
+        justify-self: right;
+        color: white;
+        margin: 0;
+    }
+
+    #message-header {
+        grid-row: 2/3;
+        grid-column: 3/4;
+        justify-self: center;
+        margin: 0;
+    }
+
+    input {
+        border-radius: 0.5em;
+        padding: 2px;
+    }
+
+    input:hover {
+        box-shadow: white 0 0 3px 0;
+    }
+
+    #submit-hide {
+        display: none;
+    }
+
+    #submit {
+        grid-column: 3/4;
+        justify-self: right;
+        margin-right: 5%;
+        border: white 2px solid;
+        padding: 8px;
+    }
+
+    #submit:hover {
+        box-shadow: #ffffff 0px 0px 5px 0px
+    }
+
+    #message-form {
+        grid-row: 3/5;
+        grid-column: 3/4;
+        width: 90%;
+        height: 5em;
+        border-radius: 1em;
+        padding: 10px;
+    }
+
+    #message-form:hover {
+        box-shadow: white 0 0 3px 0px;
+    }
+
+    #close {
+        border-bottom: white solid 5px;
+        width: 10%;
+        grid-column: 1/4;
+        justify-self: center;
+        margin: 10px;
+        border-radius: 4px;
+        margin: 0;
+        height: 20px;
+    }
+
+    #close:hover {
+        cursor: pointer;
+    }
+}

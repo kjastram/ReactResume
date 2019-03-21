@@ -1,0 +1,36 @@
+#Intro {
+    grid-column: 2/3;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    #Intro-1 {
+        letter-spacing: 5px;
+        font-size: 1.3125em;
+        width: 50%;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #Intro-2 {
+        letter-spacing: 4px;
+        font-size: 1.3125em;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
