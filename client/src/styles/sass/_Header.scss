@@ -1,6 +1,8 @@
+@import "_Variables.scss";
+
 #Header {
     grid-row: 1/2;
-    background-color: #525252;
+    background-color: $primary-color;
     color: white;
     font-size: 31px;
     letter-spacing: 12px;

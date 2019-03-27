@@ -15,7 +15,7 @@ class SkillOverlay extends Component {
         return (
             <Link to="/MySkills" id="Overlay-Return">
                 <div id="Overlay-Grid" >
-                    <LogoSvg skill={this.props.match.params.id} width="256" fill="#ffffff" />
+                    <LogoSvg skill={this.props.match.params.id} width="256" />
                     <p id="Text">{this.getDescription(this.props.match.params.id)}</p>
                 </div>
             </Link>
@@ -41,11 +41,11 @@ const skillDescriptions = [{
 },
 {
     skill: "Python",
-    desciption: "I am able to use python in various ML and statistical applications and visualizations using Matplotlib.",
+    desciption: "I am able to use python in various ML and data science applications. I have experience using python libraries like NumPy, pandas, Matplotlib and Scikit-Learn.",
 },
 {
     skill: "R",
-    desciption: "I am proficient at using R in data manipulation and visualization. It is a great tool for manipulating large sets of data.",
+    desciption: "I am proficient at using R in data manipulation and visualization, although prefer python for most data science applications.",
 },
 {
     skill: "MongoDB",
@@ -61,7 +61,7 @@ const skillDescriptions = [{
 },
 {
     skill: "HTML&CSS",
-    desciption: "Solid grasp of CSS and HTML is essential for any front end development.",
+    desciption: "Solid grasp of CSS and HTML is essential for any front end development. I especially enjoy the use of CSS Grid and Flexbox for responsive layouts.",
 },
 {
     skill: "Javascript",

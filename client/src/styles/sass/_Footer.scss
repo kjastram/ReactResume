@@ -1,3 +1,5 @@
+@import "_Variables.scss";
+
 #Footer {
     grid-row: 3/4;
     width: 100%;
@@ -117,7 +119,7 @@
     height: 33%;
     width: 100%;
     margin: 0;
-    background-color: #525252;
+    background-color: $primary-color;
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
     grid-template-rows: 30px repeat(3, 1fr) 1fr;
