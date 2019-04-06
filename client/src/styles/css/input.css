@@ -5,13 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 0;
-  margin-bottom: 1em;
 }
 #Intro #Intro-1 {
   letter-spacing: 5px;
   font-size: 1.3125em;
-  width: 50%;
+  max-width: 50%;
+  min-width: 210px;
   display: flex;
   align-self: center;
   align-items: center;
@@ -32,6 +31,14 @@
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  #Intro #Intro-1 {
+    font-size: 1em;
+  }
+  #Intro #Intro-2 {
+    font-size: 1em;
+  }
+}
 #Skills-wrapper {
   grid-row: 1/2;
   grid-column: 2/3;
@@ -63,6 +70,7 @@
   transition-property: color, background-color;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
+  min-width: 90px;
 }
 .skill p {
   align-self: center;
@@ -122,17 +130,45 @@
   justify-self: center;
   grid-row: 1/3;
   grid-column: 2/3;
+  margin-right: 12px;
 }
 
 #Overlay-Return:hover {
   cursor: default;
 }
 
+@media only screen and (max-width: 600px) {
+  #Skills-subgrid {
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+
+  .skill p {
+    font-size: 14px;
+  }
+
+  #Overlay-Grid #Logo {
+    transform: scale(0.6);
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  #Overlay-Grid #Text {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 20px;
+    line-height: 5vh;
+    font-weight: 400;
+    text-align: center;
+    align-self: flex-start;
+    margin: 15px;
+  }
+}
 #Header {
   grid-row: 1/2;
+  grid-column: 1/4;
   background-color: #2f3a5c;
   color: white;
-  font-size: 31px;
+  font-size: 2em;
   letter-spacing: 12px;
   display: flex;
   align-items: center;
@@ -156,6 +192,20 @@
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 600px) {
+  #Header {
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+  }
+
+  #Github-logo {
+    transform: scale(0.8);
+  }
+
+  #Github-logo:hover {
+    transform: scale(0.9);
+  }
+}
 #Footer {
   grid-row: 3/4;
   width: 100%;
@@ -346,8 +396,8 @@ body {
   width: 100%;
   justify-self: center;
   display: grid;
-  grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: 100%;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 #Grid {
@@ -388,6 +438,7 @@ body {
   justify-self: right;
   margin-top: 12px;
   margin-right: 12px;
+  margin-left: 0;
   letter-spacing: 4px;
   word-spacing: 3px;
   font-size: 14px;
@@ -441,6 +492,30 @@ body {
   transition-timing-function: ease-in-out;
   opacity: 1;
   transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  #Middle-right-grid {
+    margin-right: 0px;
+  }
+  #Middle-right-grid #arrows {
+    transform: scale(0.7);
+  }
+  #Middle-right-grid #arrows-text {
+    font-size: 12px;
+    margin-right: 0px;
+  }
+
+  #Middle-left-grid {
+    margin-left: 0px;
+  }
+  #Middle-left-grid #arrows {
+    transform: scale(0.7);
+  }
+  #Middle-left-grid #arrows-text {
+    font-size: 12px;
+    margin-left: 0px;
+  }
 }
 
 /*# sourceMappingURL=input.css.map */

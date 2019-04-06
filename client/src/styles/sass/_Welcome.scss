@@ -7,13 +7,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 0;
-    margin-bottom: 1em;
 
     #Intro-1 {
         letter-spacing: 5px;
         font-size: 1.3125em;
-        width: 50%;
+        max-width: 50%;
+        min-width: 210px;
         display: flex;
         align-self: center;
         align-items: center;
@@ -33,6 +32,18 @@
 
         p {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #Intro {
+        #Intro-1 {
+            font-size: 1em;
+        }
+
+        #Intro-2 {
+            font-size: 1em;
         }
     }
 }
