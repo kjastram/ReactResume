@@ -20,5 +20,5 @@ This website is hosted via AWS lightsail using the Bitnami Node.js stack. Expres
 
 ## Planned Updates
 - Projects Page
-    - Data Visualization examples using Matplotlib or D3.js
+
     
