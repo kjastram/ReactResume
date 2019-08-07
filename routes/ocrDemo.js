@@ -36,7 +36,7 @@ ocrDemoRoute.post("/api/demo/upload", (req, res) => {
 
 
     let options = {
-        pythonPath: "/usr/bin/python3"
+        pythonPath: "/usr/bin/python3.7"
     }
 
     let pyshell = new PythonShell('./ocrDemo/Task2.py', options);
