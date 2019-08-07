@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const NavRight = (props) => {
     return (
         <div id="Middle-right-grid">
-            <Link to="/MySkills" id="arrows">
+            <Link to={props.route} id="arrows">
                 <div >
                     <DoubleArrowsRight color='#979797' />
                 </div>

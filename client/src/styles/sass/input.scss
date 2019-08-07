@@ -3,6 +3,7 @@
 @import "_Header.scss";
 @import "_Footer.scss";
 @import "_Variables.scss";
+@import "_MyProjects.scss";
 
 
 body {
@@ -102,7 +103,7 @@ body {
         transition-duration: 200ms;
         transition-timing-function: ease-in-out;
         opacity: 0.6;
-        writing-mode: vertical-lr;
+        writing-mode: sideways-rl;
         grid-column: 2/3;
         grid-row: 1/4;
         align-self: center;

@@ -175,35 +175,10 @@
   justify-content: center;
 }
 
-#Github-logo {
-  grid-row: 1/2;
-  position: absolute;
-  right: 10px;
-  fill: white;
-  transition-property: transform, fill;
-  transition: 300ms ease-in;
-  transform: scale(1);
-}
-
-#Github-logo:hover {
-  transition-property: transform, fill;
-  transition: 100ms ease-in;
-  fill: black;
-  transform: scale(1.1);
-}
-
 @media only screen and (max-width: 600px) {
   #Header {
     font-size: 1.5em;
     letter-spacing: 0.25em;
-  }
-
-  #Github-logo {
-    transform: scale(0.8);
-  }
-
-  #Github-logo:hover {
-    transform: scale(0.9);
   }
 }
 #Footer {
@@ -380,6 +355,137 @@
   cursor: pointer;
 }
 
+#Projects-wrapper {
+  grid-column: 2/3;
+  overflow: scroll;
+  box-shadow: 1px 1px 3px black;
+  margin-top: 5px;
+}
+#Projects-wrapper #Project {
+  height: 25%;
+  margin: 7px;
+  padding: 5px;
+  border-bottom: 2px solid black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 2fr 2fr;
+}
+#Projects-wrapper #Project p {
+  margin: 0px;
+  margin-bottom: 5px;
+  grid-column: 1/2;
+}
+#Projects-wrapper #Project i {
+  font-size: 12px;
+  grid-column: 1/2;
+}
+#Projects-wrapper #Project #Github-logo {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: right;
+  fill: black;
+  transition-property: transform, fill;
+  transition: 300ms ease-in;
+  transform: scale(1);
+}
+#Projects-wrapper #Project #Github-logo-disable {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: right;
+  fill: gray;
+  transition-property: transform, fill;
+  transition: 300ms ease-in;
+  transform: scale(1);
+  visibility: hidden;
+}
+#Projects-wrapper #Project #Github-logo-disable:hover {
+  cursor: not-allowed;
+}
+#Projects-wrapper #Project #Github-logo:hover {
+  transition-property: transform, fill;
+  transition: 100ms ease-in;
+  fill: black;
+  transform: scale(1.1);
+}
+#Projects-wrapper #Project #Demo-button {
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  width: 25%;
+  justify-self: right;
+  border-radius: 20px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+}
+#Projects-wrapper #Project #Demo-button:hover {
+  transition-property: transform;
+  transition: 100ms ease-in;
+  transform: scale(1.05);
+}
+#Projects-wrapper #Project #Demo-button-disable {
+  min-width: 50px;
+  justify-self: right;
+  border-radius: 20px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-color: gray;
+  border: none;
+  visibility: hidden;
+}
+
+#Ocr-Table {
+  grid-column: 2/3;
+}
+
+#download:hover {
+  box-shadow: black 0px 0px 5px 0px;
+  cursor: pointer;
+}
+
+#download {
+  color: gray;
+  padding: 4px;
+  width: 120px;
+}
+
+#upload {
+  color: gray;
+  padding: 4px;
+  width: 170px;
+}
+
+#upload-hide {
+  visibility: hidden;
+  display: none;
+}
+
+#upload:hover {
+  box-shadow: black 0px 0px 5px 0px;
+  cursor: pointer;
+}
+
+#browse {
+  color: gray;
+  padding: 4px;
+  width: 170px;
+}
+
+#browse-hide {
+  visibility: hidden;
+  display: none;
+}
+
+#browse:hover {
+  box-shadow: black 0px 0px 5px 0px;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: Helvetica;
@@ -474,7 +580,7 @@ body {
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
   opacity: 0.6;
-  writing-mode: vertical-lr;
+  writing-mode: sideways-rl;
   grid-column: 2/3;
   grid-row: 1/4;
   align-self: center;

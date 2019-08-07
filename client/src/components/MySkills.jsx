@@ -6,7 +6,7 @@ export default class MySkills extends Component {
     render() {
         return (
             <React.Fragment>
-                <NavLeft>Welcome</NavLeft>
+                <NavLeft route="/">Welcome</NavLeft>
                 <div id="Skills-wrapper">
                     <div id="Skills-subgrid">
                         <Skill>Node.js</Skill>

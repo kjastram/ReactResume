@@ -12,34 +12,9 @@
     justify-content: center;
 }
 
-#Github-logo {
-    grid-row: 1/2;
-    position: absolute;
-    right: 10px;
-    fill: white;
-    transition-property: transform, fill;
-    transition: 300ms ease-in;
-    transform: scale(1);
-}
-
-#Github-logo:hover {
-    transition-property: transform, fill;
-    transition: 100ms ease-in;
-    fill: black;
-    transform: scale(1.1);
-}
-
 @media only screen and (max-width: 600px) {
     #Header {
         font-size: 1.5em;
         letter-spacing: 0.25em;
-    }
-
-    #Github-logo {
-        transform: scale(0.8);
-    }
-
-    #Github-logo:hover {
-        transform: scale(0.9);
     }
 }

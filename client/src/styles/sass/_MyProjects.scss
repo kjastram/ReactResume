@@ -1,0 +1,144 @@
+#Projects-wrapper {
+    //border: 1px solid red;
+    grid-column: 2/3;
+    overflow: scroll;
+    box-shadow: 1px 1px 3px black;
+    margin-top: 5px;
+
+    #Project {
+        height: 25%;
+        margin: 7px;
+        padding: 5px;
+        border-bottom: 2px solid black;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 3fr 2fr 2fr;
+
+        p {
+            margin: 0px;
+            margin-bottom: 5px;
+            grid-column: 1/2;
+        }
+
+        i {
+            font-size: 12px;
+            grid-column: 1/2;
+        }
+
+        #Github-logo {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            justify-self: right;
+            fill: black;
+            transition-property: transform, fill;
+            transition: 300ms ease-in;
+            transform: scale(1);
+        }
+
+        #Github-logo-disable {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            justify-self: right;
+            fill: gray;
+            transition-property: transform, fill;
+            transition: 300ms ease-in;
+            transform: scale(1);
+            visibility: hidden;
+        }
+
+        #Github-logo-disable:hover {
+            cursor: not-allowed;
+        }
+
+        #Github-logo:hover {
+            transition-property: transform, fill;
+            transition: 100ms ease-in;
+            fill: black;
+            transform: scale(1.1);
+        }
+
+        #Demo-button {
+            min-width: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            color: black;
+            width: 25%;
+            justify-self: right;
+            border-radius: 20px;
+            grid-column: 2/3;
+            grid-row: 3/4;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #Demo-button:hover {
+            transition-property: transform;
+            transition: 100ms ease-in;
+            transform: scale(1.05);
+        }
+
+        #Demo-button-disable {
+            min-width: 50px;
+            justify-self: right;
+            border-radius: 20px;
+            grid-column: 2/3;
+            grid-row: 3/4;
+            background-color: gray;
+            border: none;
+            visibility: hidden;
+        }
+    }
+}
+
+#Ocr-Table {
+    grid-column: 2/3;
+}
+
+#download:hover {
+    box-shadow: black 0px 0px 5px 0px;
+    cursor: pointer;
+}
+
+#download {
+    color: gray;
+    padding: 4px;
+    //border-bottom: gray 1px solid;
+    width: 120px;
+}
+
+#upload {
+    color: gray;
+    padding: 4px;
+    //border-bottom: gray 1px solid;
+    width: 170px;
+}
+
+#upload-hide {
+    visibility: hidden;
+    display: none;
+}
+
+#upload:hover {
+    box-shadow: black 0px 0px 5px 0px;
+    cursor: pointer;
+}
+
+#browse {
+    color: gray;
+    padding: 4px;
+    //border-bottom: gray 1px solid;
+    width: 170px;
+}
+
+#browse-hide {
+    visibility: hidden;
+    display: none;
+}
+
+#browse:hover {
+    box-shadow: black 0px 0px 5px 0px;
+    cursor: pointer;
+}

@@ -4,11 +4,13 @@ import { AnimatedSwitch, spring } from 'react-router-transition'
 
 import Welcome from "./components/Welcome";
 import MySkills from "./components/MySkills";
+import MyProjects from "./components/MyProjects";
 import SkillOverlay from './components/SkillOverlay';
 import Footer from './components/Footer'
 import Header from './components/Header'
 
 import "./styles/css/input.css";
+import OcrTable from "./components/OCR/OcrTable";
 
 
 export default class App extends Component {
@@ -79,6 +81,8 @@ export default class App extends Component {
               mapStyles={this.mapStyles}
               className="route-wrapper"
             >
+              <Route path="/Ocr" component={OcrTable} />
+              <Route path="/MyProjects" component={MyProjects} />
               <Route path="/MySkills" component={MySkills} />
               <Route exact path="/" component={Welcome} />
             </AnimatedSwitch>
