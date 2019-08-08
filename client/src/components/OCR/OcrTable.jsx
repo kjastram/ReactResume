@@ -84,8 +84,10 @@ const OcrTable = () => {
                         error: data.data[e].error
                     })
                 })
-                setIsLoading(false)
                 setOutput(results)
+            })
+            .then(() => {
+                setIsLoading(false)
             })
     }
 
@@ -93,16 +95,20 @@ const OcrTable = () => {
         if (!fileName) return "Browse"
         else return fileName
     }
+    const loadingOverlay = () => {
+        if (isLoading) {
+            return <div id="Loading-Overlay"><h1 >Loading...</h1></div>
+        }
+    }
 
     if (!output) {
-        return <h1>Loading...</h1>
+        return <div id="Loading-Overlay"><h1 >Loading...</h1></div>
     }
 
-    if (isLoading) {
-        return <h1>Loading...</h1>
-    }
+
     return (
         <div id="Ocr-Table">
+            {loadingOverlay()}
             <MuiThemeProvider >
                 <Table height={`${window.innerHeight - 300}px`} data={output} fixedHeader={true}>
                     <TableHeader adjustForCheckbox={false} enableSelectAll={false} displaySelectAll={false}>

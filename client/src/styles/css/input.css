@@ -486,6 +486,23 @@
   cursor: pointer;
 }
 
+#Loading-Overlay {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#Loading-Overlay h1 {
+  text-align: center;
+}
+
 body {
   margin: 0;
   font-family: Helvetica;

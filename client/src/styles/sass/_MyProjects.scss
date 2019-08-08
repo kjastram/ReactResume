@@ -142,3 +142,21 @@
     box-shadow: black 0px 0px 5px 0px;
     cursor: pointer;
 }
+
+#Loading-Overlay {
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 5px;
+    background-color: rgba($color: white, $alpha: 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+    }
+}
