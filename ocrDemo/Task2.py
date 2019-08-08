@@ -128,7 +128,7 @@ def get_tables(img):
     
     # find external contours from the mask, which most probably will belong to tables or to images
     # RETR_EXTERNAL
-    contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    img, contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
     contours_poly = [None] * len(contours)
     bound_rect = [None] * len(contours)
