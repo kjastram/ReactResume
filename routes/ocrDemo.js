@@ -5,7 +5,6 @@ const fileUpload = require("express-fileupload");
 const {
     PythonShell
 } = require('python-shell');
-const chokidar = require('chokidar');
 
 
 ocrDemoRoute = express();
@@ -36,7 +35,7 @@ ocrDemoRoute.post("/api/demo/upload", (req, res) => {
 
 
     let options = {
-        pythonPath: "/home/bitnami/anaconda3/bin/python"
+        pythonPath: "/anaconda3/bin/python"
     }
 
     let pyshell = new PythonShell('./ocrDemo/Task2.py', options);
@@ -55,24 +54,8 @@ ocrDemoRoute.post("/api/demo/upload", (req, res) => {
         console.log('The exit code was: ' + code);
         console.log('The exit signal was: ' + signal);
         console.log('finished');
-    })
-
-    const watcher = chokidar.watch('../ocrDemo/new_output_0.json', {
-        persistent: true
-    })
-
-    watcher.on('change', (path) => {
-        console.log(path)
         return res.sendFile(path.join(__dirname, "../ocrDemo/new_output_0.json"))
     })
-    // fs.watch(path.join(__dirname, '../ocrDemo/new_output_0.json'), {
-    //     persistent: true
-    // }, (event, filename) => {
-    //     console.log(event)
-    //     console.log(filename)
-    //     return res.sendFile(path.join(__dirname, "../ocrDemo/new_output_0.json"))
-    // })
-
 
 })
 
