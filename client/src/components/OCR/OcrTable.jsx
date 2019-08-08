@@ -84,8 +84,8 @@ const OcrTable = () => {
                         error: data.data[e].error
                     })
                 })
-                setOutput(results)
                 setIsLoading(false)
+                setOutput(results)
             })
     }
 
