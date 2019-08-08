@@ -724,7 +724,7 @@ def folder_to_predictions(dirname, actual_dict = None):
     if(actual_dict != None):
         print("Incorrect same: {}".format(len(incorrect_same)))
         print("Incorrect diff: {}".format(len(incorrect_diff)))
-    print("Ratio:          {}".format(len(correct)/len(total)))
+    #print("Ratio:          {}".format(len(correct)/len(total)))
 
     for filename in [*too_big, *not_enough_conf, *incorrect_same, *incorrect_diff]:
         im = cv.imread(os.path.join(dirname, filename))
