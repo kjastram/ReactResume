@@ -128,7 +128,7 @@ def get_tables(img):
     
     # find external contours from the mask, which most probably will belong to tables or to images
     # RETR_EXTERNAL
-    img, contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    img_notused, contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
     contours_poly = [None] * len(contours)
     bound_rect = [None] * len(contours)
@@ -154,7 +154,7 @@ def get_tables(img):
 
         roi = joints[int(r[1]):int(r[1]+r[3]), int(r[0]):int(r[0]+r[2])]
 
-        joints_contours, joints_hierarchy = cv.findContours(roi, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE)
+        joints_img_notused, joints_contours, joints_hierarchy = cv.findContours(roi, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE)
 
         if(joints_hierarchy is None or len(joints_hierarchy[0]) <= 4):
             continue
@@ -246,7 +246,7 @@ def get_table_cells(img):
     
     # find external contours from the mask, which most probably will belong to tables or to images
     # RETR_EXTERNAL
-    contours, hierarchy = cv.findContours(mask, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
+    img_notused, contours, hierarchy = cv.findContours(mask, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
 
     contours_poly = [None] * len(contours)
     bound_rect = [None] * len(contours)
@@ -495,7 +495,7 @@ def get_tokens_from_cells(im, hints = {}):
     show_image(im_th)
 
     # find external contours in the image
-    ctrs, hier = cv.findContours(im_th, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    img_notused, ctrs, hier = cv.findContours(im_th, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
     # get rectangles containing each contour
     rects = [cv.boundingRect(ctr) for ctr in ctrs]
