@@ -63,6 +63,7 @@ const OcrTable = () => {
 
     const handleSubmitTemplate = async (event) => {
         event.preventDefault()
+        setIsLoading(true)
         let formData = new FormData()
         formData.append('upload', file)
 
@@ -84,6 +85,7 @@ const OcrTable = () => {
                     })
                 })
                 setOutput(results)
+                setIsLoading(false)
             })
     }
 
