@@ -66,29 +66,33 @@ const OcrTable = () => {
         setIsLoading(true)
         let formData = new FormData()
         formData.append('upload', file)
-
-        axios.post('api/demo/upload', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-            .then(data => {
-                let results = []
-                Object.keys(data.data).forEach(e => {
-                    results.push({
-                        hole: e.substring(1, 2),
-                        column: e.substring(3, e.length - 1),
-                        row: e.substring(e.length - 1),
-                        result: data.data[e].result,
-                        conf: data.data[e].conf,
-                        error: data.data[e].error
+        try {
+            axios.post('api/demo/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+                .then(data => {
+                    let results = []
+                    Object.keys(data.data).forEach(e => {
+                        results.push({
+                            hole: e.substring(1, 2),
+                            column: e.substring(3, e.length - 1),
+                            row: e.substring(e.length - 1),
+                            result: data.data[e].result,
+                            conf: data.data[e].conf,
+                            error: data.data[e].error
+                        })
                     })
+                    setOutput(results)
                 })
-                setOutput(results)
-            })
-            .then(() => {
-                setIsLoading(false)
-            })
+                .then(() => {
+                    setIsLoading(false)
+                })
+        }
+        catch (error) {
+            console.log(error)
+        }
     }
 
     const browseButton = () => {
